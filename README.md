@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A modern, responsive weather application built with React, TypeScript, and Tailwind CSS. The app provides real-time weather data, supports location search, and remembers user preferences for a smooth user experience.
 
-## Getting Started
+Live Demo:
+https://weather-dashboard1-sigma.vercel.app/
 
-First, run the development server:
+Features:
+- Automatic location detection using browser geolocation
+- Manual search by city name or US ZIP code
+- Current weather conditions (temperature, description)
+- Additional metrics: feels like, humidity, wind, sunrise, sunset
+- 7-day forecast
+- Clickable days to view hourly forecast
+- Favorites system with persistent storage
+- LocalStorage caching for faster reloads
+- Dynamic UI based on weather conditions
+- Responsive design for mobile and desktop
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tech Stack:
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Open-Meteo API
+- Open-Meteo Geocoding API
+- Zippopotam API
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Installation:
+1. Clone the repository:
+   git clone https://github.com/poornachandra1704/weather-dashboard
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate to the project:
+   cd weather-dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Install dependencies:
+   npm install
 
-## Learn More
+4. Run the development server:
+   npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+5. Open in browser:
+   http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+How It Works:
+- On initial load, the app attempts to fetch the user's location using the Geolocation API.
+- If permission is denied, the user can search manually.
+- Weather data is fetched from Open-Meteo using latitude and longitude.
+- Search uses Open-Meteo Geocoding and Zippopotam APIs.
+- The selected location is saved in localStorage for persistence.
+- Favorites are stored locally and can be quickly accessed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Local Storage Keys:
+- weather_location: stores last selected location
+- favorites: stores saved favorite locations
 
-## Deploy on Vercel
+Notes:
+- No API key required (uses free public APIs)
+- Handles loading, error, and empty states
+- Includes keyboard navigation for search
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Future Improvements:
+- Unit preference persistence (C/F)
+- Improved accessibility support
+- Weather radar integration
+- PWA/offline support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Author:
+poorna chandra
+poornachandra1704@gmail.com
+
