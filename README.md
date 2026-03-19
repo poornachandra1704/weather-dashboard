@@ -1,7 +1,17 @@
+Goal:
+To build a zero-click, user-friendly weather dashboard that provides instant insights with smooth interactions and persistent user preferences.
+
+
+
 A modern, responsive weather application built with React, TypeScript, and Tailwind CSS. The app provides real-time weather data, supports location search, and remembers user preferences for a smooth user experience.
+
+
 
 Live Demo:
 https://weather-dashboard1-sigma.vercel.app/
+
+Video Walkthrough:
+https://www.loom.com/share/4dd5061761e94dd5ac3cf66dd2ce2e14
 
 Features:
 - Automatic location detection using browser geolocation
@@ -62,6 +72,9 @@ Future Improvements:
 - Improved accessibility support
 - Weather radar integration
 - PWA/offline support
+
+AI Usage:
+AI tools were used for initial scaffolding and UI improvements. All core logic, state management, and final implementation were written and verified manually.
 
 Author:
 poorna chandra
